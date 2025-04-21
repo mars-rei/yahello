@@ -1,0 +1,125 @@
+:root {
+    --orange1: #fa9e46;
+    --orange2: #f98f2a; 
+    --orange3: #fa8125;
+
+    --green1: #8e9b66;
+    --green2: #5a6e3a; 
+    --green3: #2b4521;
+}
+
+body {
+    background-color: var(--orange1);
+}
+
+/*
+heart loader from:
+https://css-loaders.com/pulsing/
+*/
+.heart-loader {
+    width: 50px;
+    aspect-ratio: 1;
+    color:var(--orange3);
+    background:
+     radial-gradient(circle at 60% 65%, currentColor 62%, #0000 65%) top left,
+     radial-gradient(circle at 40% 65%, currentColor 62%, #0000 65%) top right,
+     linear-gradient(to bottom left, currentColor 42%,#0000 43%) bottom left ,
+     linear-gradient(to bottom right,currentColor 42%,#0000 43%) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.heart-loader:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    opacity: 0.4;
+    animation: l3 1s infinite;
+}
+
+@keyframes l3 {
+    to {transform:scale(1.8);opacity:0}
+}
+
+
+/*
+loading loader from:
+https://css-loaders.com/classic/
+*/
+.loading {
+    width: fit-content;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 30px;
+    background:linear-gradient(90deg,var(--green3) 50%,#0000 0) right/200% 100%;
+    animation: l21 2s infinite linear;
+}
+
+.loading::before {
+    content :"Loading...";
+    color: var(--orange3);
+    padding: 0 5px;
+    background: inherit;
+    background-image: linear-gradient(90deg,var(--orange1) 50%,var(--green3) 0);
+    -webkit-background-clip:text;
+            background-clip:text;
+}
+  
+@keyframes l21{
+    100%{background-position: left}
+}
+
+
+
+
+
+
+.single-item-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    height: 100vh; 
+    overflow: hidden;
+}
+
+.polaroid-photo {
+    width: 350px;
+    height: 350px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.polaroid {
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    background-color: var(--green1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+
+.polaroid-text-container {
+    text-align: center;
+    justify-content: center; 
+    font-family: monospace;
+    display: flex;
+}
+
+.polaroid-text-container {
+    text-align: center;
+    justify-content: center; 
+    align-items: center; 
+    font-family: monospace;
+    height: 50px; 
+    padding-top: 50px;
+    font-size: 20px;
+    color: var(--green3);
+}
+
+
+
+
