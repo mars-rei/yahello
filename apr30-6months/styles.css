@@ -1,3 +1,4 @@
+/* ---- main styling -----*/
 :root {
     --orange1: #fa9e46;
     --orange2: #f98f2a; 
@@ -12,6 +13,8 @@ body {
     background-color: var(--orange1);
 }
 
+
+/* ---- loader on loading.html ---- */
 /*
 loading loader from:
 https://css-loaders.com/classic/
@@ -40,9 +43,7 @@ https://css-loaders.com/classic/
 }
 
 
-
-
-
+/* ---- containers ---- */
 .section {
     display: flex;
     justify-content: center;
@@ -69,9 +70,7 @@ https://css-loaders.com/classic/
 }
 
 
-
-
-
+/* ---- polaroid styling ---- */
 .polaroid-photo {
     width: 350px;
     height: 350px;
@@ -175,10 +174,7 @@ https://css-loaders.com/classic/
 }
 
 
-
-
-/* thepast6months.html - typewriter effect */
-
+/* ---- typewriter effect on thepast6months.html ---- */
 /* 
 some lines of code of a typewriting effect from:
 https://css-tricks.com/snippets/css/typewriter-effect/
@@ -203,7 +199,6 @@ https://css-tricks.com/snippets/css/typewriter-effect/
     }
 }
   
-/* The typewriter cursor effect */
 @keyframes blink-caret {
     from, to { 
         border-color: transparent 
@@ -214,15 +209,13 @@ https://css-tricks.com/snippets/css/typewriter-effect/
 }
 
 
-
-
-/* spacer */
+/* ---- spacer styling ---- */
 .spacer {
     height: 200px;
 }
   
 
-/* text */
+/* ---- extra text styling ---- */
 h2 {
     color: var(--green2);
     font-family: monospace;
@@ -230,8 +223,7 @@ h2 {
 }
   
   
-
-
+/* ---- text bubble styling ---- */
 /* 
 text messages code tweaked from:
 https://codepen.io/ezenith/pen/pJLypJ
@@ -285,7 +277,7 @@ https://codepen.io/ezenith/pen/pJLypJ
 }
 
 
-/* heart button */
+/* ---- heart button on yahello!!!!.html ---- */
 .heart-button {
     margin-top: 20px;
     display: inline-block;
