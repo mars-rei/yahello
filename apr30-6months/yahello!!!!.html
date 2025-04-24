@@ -23,15 +23,13 @@
             }
         </script>
 
-        <div class="single-item-container">
+        <div class="section">
             <div class="polaroid">
-                <div class="polaroid-photo">
-                    <img src="imgs/1-sillies.jpg" class="polaroid-photo">
-                    <div class="polaroid-text-front">
-                        OCT 30 2024 ~ DAY 1
-                    </div>
+                <img src="imgs/1-sillies.jpg" class="polaroid-photo">
+                <div class="polaroid-text-front">
+                    OCT 30 2024 ~ DAY 1
                 </div>
-                <div class="polaroid-back">
+                <div class="polaroid-back" onmouseover="startRevealTimer()">
                     <div class="polaroid-text-back">
                         APR 30 2025 ~ MONTH 6
                         <br>
@@ -49,7 +47,36 @@
                     </div>
                 </div>
             </div>
+            
         </div>
+
+        <div class="heart-button-container">
+            <!-- heart icon from -->
+            <!--https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Vlad Szirka - Flaticon-->
+            <a href="thepast6months.html" target="_blank" id="heartButton" class="heart-button" style="display: none;">
+                <img src="imgs/heart button.png">
+            </a>
+        </div>
+
+        
+
+        <!-- only show heart button when polaroid has been hovered on for 5 seconds -->
+        <script>
+            let timerStarted = false;
+            
+            function startRevealTimer() {
+                if (!timerStarted) {
+                    timerStarted = true;
+                    setTimeout(() => {
+                        const button = document.getElementById('heartButton');
+                        if (button) {
+                            button.style.display = 'inline-block';
+                        }
+                    }, 3000);
+                }
+            }
+        </script>
+            
         
             
     </body>

@@ -44,6 +44,8 @@ https://css-loaders.com/pulsing/
 }
 
 
+
+
 /*
 loading loader from:
 https://css-loaders.com/classic/
@@ -75,14 +77,34 @@ https://css-loaders.com/classic/
 
 
 
-
-.single-item-container {
+.section {
     display: flex;
     justify-content: center;
     align-items: center;   
     height: 100vh; 
     overflow: hidden;
 }
+
+.heart-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    margin-top: -20vh;
+}
+
+.scrollable-section {
+    display: flex;
+    flex-direction: column; 
+    margin-right: 10%;
+    margin-left: 10%;
+    width: 80%;
+    height: 100%;
+    align-items: center;
+}
+
+
+
+
 
 .polaroid-photo {
     width: 350px;
@@ -121,7 +143,7 @@ https://css-loaders.com/classic/
     display: none;
 }
 
-.polaroid-text-front, .polaroid-text-back {
+.polaroid-text-front, .polaroid-text-back, .polaroid-static {
     text-align: center;
     justify-content: center; 
     font-family: monospace;
@@ -155,4 +177,154 @@ https://css-loaders.com/classic/
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.polaroid-static {
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    background-color: var(--green1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    position: relative;
+}
+
+.polaroid-static .polaroid-photo {
+    width: 350px;
+    height: 350px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.polaroid-row {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+
+
+
+/* thepast6months.html - typewriter effect */
+
+/* 
+some lines of code of a typewriting effect from:
+https://css-tricks.com/snippets/css/typewriter-effect/
+*/
+
+.typewriter h1 {
+    overflow: hidden; 
+    border-right: .15em solid var(--orange3);
+    color: var(--green3);
+    white-space: nowrap; 
+    margin: 0; 
+    letter-spacing: .15em; 
+    animation: typing 3.5s steps(40, end) forwards, blink-caret 0.75s step-end 3.5s forwards;
+}
+
+@keyframes typing {
+    from { 
+        width: 0;
+    }
+    to { 
+        width: 50%;
+    }
+}
+  
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { 
+        border-color: transparent 
+    }
+    50% { 
+        border-color: var(--orange3); 
+    }
+}
+
+
+
+
+/* spacer */
+.spacer {
+    height: 200px;
+}
+  
+
+/* text */
+h2 {
+    color: var(--green2);
+    font-family: monospace;
+    font-weight: bolder;
+}
+  
+  
+
+
+/* 
+text messages code tweaked from:
+https://codepen.io/ezenith/pen/pJLypJ
+*/
+.text-messages {
+    width: 400px;
+    padding: 10px;
+}
+
+.message-orange {
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: var(--orange3);
+    width: 200px;
+    height: auto;
+    text-align: left;
+    font: 400 .9em 'Open Sans', sans-serif;
+    border: 1px solid var(--orange3);
+    border-radius: 10px;
+    color: var(--green3)
+}
+
+.message-green {
+    position: relative;
+    margin-bottom: 10px;
+    margin-left: calc(100% - 240px);
+    padding: 10px;
+    background-color: var(--green3);
+    width: 200px;
+    height: auto;
+    text-align: left;
+    font: 400 .9em 'Open Sans', sans-serif;
+    border: 1px solid var(--green3);
+    border-radius: 10px;
+    color: var(--orange2)
+}
+
+.message {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* heart button */
+.heart-button {
+    margin-top: 20px;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+
+.heart-button img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.heart-button:hover {
+    transform: scale(1.1);
 }
