@@ -13,40 +13,6 @@ body {
 }
 
 /*
-heart loader from:
-https://css-loaders.com/pulsing/
-*/
-.heart-loader {
-    width: 50px;
-    aspect-ratio: 1;
-    color:var(--orange3);
-    background:
-     radial-gradient(circle at 60% 65%, currentColor 62%, #0000 65%) top left,
-     radial-gradient(circle at 40% 65%, currentColor 62%, #0000 65%) top right,
-     linear-gradient(to bottom left, currentColor 42%,#0000 43%) bottom left ,
-     linear-gradient(to bottom right,currentColor 42%,#0000 43%) bottom right;
-    background-size: 50% 50%;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-.heart-loader:after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: inherit;
-    opacity: 0.4;
-    animation: l3 1s infinite;
-}
-
-@keyframes l3 {
-    to {transform:scale(1.8);opacity:0}
-}
-
-
-
-
-/*
 loading loader from:
 https://css-loaders.com/classic/
 */
@@ -149,8 +115,9 @@ https://css-loaders.com/classic/
     font-family: monospace;
     align-items: center; 
     height: 50px; 
-    padding: 40px;
+    padding: 20px;
     font-size: 20px;
+    margin-top: 10px;
     color: var(--green3);
 }
 
@@ -232,7 +199,7 @@ https://css-tricks.com/snippets/css/typewriter-effect/
         width: 0;
     }
     to { 
-        width: 50%;
+        width: 100%;
     }
 }
   
@@ -275,12 +242,14 @@ https://codepen.io/ezenith/pen/pJLypJ
 }
 
 .message-orange {
+    float: inline-end;
     position: relative;
-    margin-left: 20px;
+    margin-left: calc(100% - 240px);
     margin-bottom: 10px;
     padding: 10px;
     background-color: var(--orange3);
-    width: 200px;
+    width: fit-content;
+    max-width: 200px;
     height: auto;
     text-align: left;
     font: 400 .9em 'Open Sans', sans-serif;
@@ -291,11 +260,12 @@ https://codepen.io/ezenith/pen/pJLypJ
 
 .message-green {
     position: relative;
+    margin-left: 20px;
     margin-bottom: 10px;
-    margin-left: calc(100% - 240px);
     padding: 10px;
     background-color: var(--green3);
-    width: 200px;
+    width: fit-content;
+    max-width: 200px;
     height: auto;
     text-align: left;
     font: 400 .9em 'Open Sans', sans-serif;
@@ -307,6 +277,11 @@ https://codepen.io/ezenith/pen/pJLypJ
 .message {
     padding: 0;
     margin: 0;
+}
+
+.message-photo {
+    max-width: 180px;
+    height: auto;
 }
 
 
