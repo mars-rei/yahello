@@ -276,6 +276,10 @@ https://codepen.io/ezenith/pen/pJLypJ
     height: auto;
 }
 
+.message-video {
+    max-width: 180px;
+    height: auto;
+}
 
 /* ---- heart button on yahello!!!!.html ---- */
 .heart-button {
