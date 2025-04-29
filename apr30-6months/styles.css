@@ -299,3 +299,11 @@ https://codepen.io/ezenith/pen/pJLypJ
 .heart-button:hover {
     transform: scale(1.1);
 }
+
+
+/* iframe spotify playlist / song styling */
+iframe {
+    border-radius: 12px;
+    width: 60%;
+    height: 400px;
+}
